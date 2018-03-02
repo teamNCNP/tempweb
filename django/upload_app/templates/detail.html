@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% load staticfiles %}
+{% if md5_form != 0 %}
+<div class = 'report_div'>
+	<h1> DB내 검색 결과 입니다. </h1>
+	<table border='1' >
+	<tbody>
+			<tr>
+				<td> File MD5 </td>
+				<td> {{ md5_form.fields.md5.initial }}</td>
+			</tr>
+			<tr>
+				<td> 바이러스 탐지 결과</td>
+				<td> {{ md5_form.fields.detected.initial }}</td>
+			</tr>
+			<tr>
+				<td> 바이러스 분석 결과 </td>
+				<td> {{ md5_form.fields.result.initial }}</td>
+			</tr>
+			<tr>
+				<td> File Type </td>
+				<td> {{ md5_form.fields.magic.initial }}</td>
+			</tr>
+			<tr>
+				<td> File Size </td>
+				<td> {{ md5_form.fields.file_size.initial }}</td>
+			</tr>
+			<tr>
+				<td> File SHA1 </td>
+				<td> {{ md5_form.fields.sha1.initial }}</td>
+			</tr>
+			<tr>	
+				<td> File SHA256 </td>
+				<td> {{ md5_form.fields.sha256.initial }}</td>
+			</tr>
+			<tr>	
+				<td> File Uploaded Date </td>
+				<td>  {{ md5_form.fields.uploaded_date.initial }}</td>
+			</tr>
+	</tbody>
+	</table>
+</div>
+{% endif %} 
+
+<div class = 'report_div'>
+{% if ssdeep_forms != 0 %}
+	<h1> 업로드한 파일과 유사한 파일에 대한 검색결과 입니다. </h1>
+	<table id ='ssdeep_table' border="1">
+		<form action="" id="idxButtonForm" >
+		</form>
+		<tbody>
+			{% for ssdeep_form in ssdeep_forms %}
+				<tr>
+					<td > File MD5 </td>
+					<td> {{ ssdeep_form.fields.md5.initial }}</td>
+				</tr>
+				<tr>
+					<td > 점수 </td>
+					<td> {{ ssdeep_form.fields.score.initial }} </td>
+				</tr>
+				<tr>-
+					<td > 바이러스 탐지 결과 </td>
+					<td> {{ ssdeep_form.fields.detected.initial }}</td>
+				</tr>
+				<tr>
+						<td > 바이러스 분석 결과 </td>
+						<td> {{ ssdeep_form.fields.result.initial }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% else %}
+	<h1> 검색된 유사한 파일이 존재하지 않습니다 </h1>
+{% endif %}
+</div>
+
+
+<script src = "{% static  '/js/detail_script.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static '/css/detail.css' %}" />
+{% endblock %}
+

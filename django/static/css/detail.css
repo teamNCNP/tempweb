@@ -1,0 +1,36 @@
+	.report_div {
+		margin-left: 15%;
+		width: 70%;
+		color: black;
+	}
+	.report_div h1{
+		text-align: center;
+	}
+	.report_div table{
+		width: 100%;
+		border-collapse: collapse;
+		margin-bottom: 15px;
+	}
+	.report_div td{
+		padding: 10px 10px;
+	}
+
+	.off-screen {
+		display: none;
+	}
+
+	#nav{
+		text-align: center;
+	}
+	#nav a {
+		display: inline-block;
+		padding: 3px 5px;
+		margin-right: 10px;
+		background: #ccc;
+		color: #000;
+		text-decoration: none;
+	}
+	#nav a.active {
+		background: #333;
+		color: #fff;
+	}
