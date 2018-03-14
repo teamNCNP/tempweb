@@ -17,7 +17,19 @@
 </head>
 
 <body>
-    {% block content %} {% endblock %}
+    
+    
+        <div class="nav_box">
+            <div class="nav_list">
+            {% block sidebar %} {% endblock %}
+                </div>
+        </div>
+        
+        <div class="con_box">
+            {% block content %} {% endblock %}
+        </div>
+
+
 </body>
 
 </html>

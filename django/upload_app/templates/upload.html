@@ -3,7 +3,7 @@
 {% load staticfiles %}
 <div class="box__logo">
     <div>
-        <span><img src="{% static 'logo.png' %}" class="img__logo" align="absmiddle"> 캡스톤 디자인</span>
+        <span><img src="{% static 'logo.png' %}" class="img__logo" align="absmiddle"> 악성코드 검사</span>
     </div>
 </div>
 
@@ -31,4 +31,18 @@
 
 
     <script src = "{% static  '/js/upload_script.js' %}">    </script>
+
 {% endblock %}
+{% block sidebar %}
+{% load staticfiles %}
+
+
+<ul class="nav-list">
+    <li class="nav-item"><a href='/upload' class="nav-link">Menu-1</a></li>
+    <li class="nav-item"><a href='/detail' class="nav-link">Menu-2</a></li>
+</ul>
+
+
+<link rel="stylesheet" type="text/css" href="{% static '/css/nav_cont.css' %}" /> 
+{% endblock %}
+
