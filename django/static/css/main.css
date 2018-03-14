@@ -23,7 +23,7 @@ body {
     padding: 4% 0%;
     font-weight: 900;
     color: #2f2f33;
-    font-size: 5.2vw;
+    font-size: 4.8vw;
 
     text-align: center;
 }
@@ -233,9 +233,9 @@ body {
                 float: left;
                 width: 150px;
                 height: 100%;
-                color: #fff;
-                position:absolute;
+                position: absolute;
                 display:table;
+                background-color: #2f2f33;
                 
             }
 
