@@ -33,26 +33,26 @@
 
 {% if ssdeep_forms != 0 %}
 <h1> 업로드한 파일과 유사한 파일에 대한 검색결과 입니다. </h1>
-<div class = 'report_div'>
-	<table id ='ssdeep_table' border="1">
+<div class = 'report_div_2'>
+	<table id ='ssdeep_table'>
 		<form action="" id="idxButtonForm" >
 		</form>
 		<tbody>
 			{% for ssdeep_form in ssdeep_forms %}
 				<tr>
-					<td > File MD5 </td>
+                    <td class="name_td"><strong>&emsp;&nbsp;File MD5</strong></td>
 					<td> {{ ssdeep_form.fields.md5.initial }}</td>
 				</tr>
 				<tr>
-					<td > 점수 </td>
+                    <td class="name_td"><strong>&emsp;&nbsp;점수</strong></td>
 					<td> {{ ssdeep_form.fields.score.initial }} </td>
 				</tr>
 				<tr>-
-					<td > 바이러스 탐지 결과 </td>
+                    <td class="name_td"><strong>&emsp;&nbsp;바이러스 탐지 결과 </strong></td>
 					<td> {{ ssdeep_form.fields.detected.initial }}</td>
 				</tr>
 				<tr>
-						<td > 바이러스 분석 결과 </td>
+                    <td class="name_td"><strong>&emsp;&nbsp;바이러스 분석 결과</strong></td>
 						<td> {{ ssdeep_form.fields.result.initial }}</td>
 				</tr>
 			{% endfor %}
@@ -60,7 +60,8 @@
 	</table>
 </div>
 {% else %}
-<div class = 'report_div'>
+<br/>
+<div class = 'report_div_2'>
 	<h2> 검색된 유사한 파일이 존재하지 않습니다 </h2>
 </div>
 {% endif %}
