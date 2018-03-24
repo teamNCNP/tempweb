@@ -4,13 +4,13 @@
 IDA_PATH = os.path.normpath('C:/Program Files/IDA 7.0/idat64.exe')
 
 # idb(i64) 저장 경로
-IDB_PATH = os.path.normpath(os.path.abspath('../media'))
+IDB_PATH = os.path.normpath(os.path.abspath('./media'))
 
 # ops 저장 경로
 OPS_PATH = IDB_PATH
 
 # ida python script 저장 경로
-IDA_PYTHON_SCRIPT_PATH = os.path.normpath(os.path.abspath('./ida_script'))
+IDA_PYTHON_SCRIPT_PATH = os.path.normpath(os.path.abspath('./upload_app/ida_script'))
 
 # CPU COUNT
 CPU_COUNT = 4
