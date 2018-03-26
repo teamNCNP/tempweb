@@ -1,37 +1,36 @@
 {% load staticfiles %}
-
 <!DOCTYPE html>
-<html lang="ko">
+<html style="height: 100%;">
 
 <head>
     <title>{% block page_title %}Capstone Desing Web{% endblock %}</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
-    <script type="text/javascript" src ="{% static 'js/jquery-3.3.1.min.js' %}">
-        (function(e, t, n) {
-            var r = e.querySelectorAll("html")[0];
-            r.className = r.className.replace(/(^|\s)no-js(\s|$)/, "$1js$2")
-        })(document, window, 0);
 
-    </script>
+<link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    
-    
-        <div class="nav_box" style="height:100%;">
-            <div class="home">
-            
-            </div>
-            <div class="nav_list" style="vertical-align: middle">
-            {% block sidebar %} {% endblock %}
-            </div>
-        </div>
-        
-        <div class="con_box">
-            {% block content %} {% endblock %}
-        </div>
 
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom" id="box_shadow">
+        <span class="team-name">N</span>
+        <span class="team-name-2">C</span>
+        <span class="team-name">N</span>
+        <span class="team-name-2">P</span>
+        <span class="project-name">&nbsp;:&nbsp;</span>
+        <a class="project-name mr-md-auto" href="/upload"> MASK</a>
+        
+        <nav class="my-2 my-md-0 mr-md-3">
+        <a class="nav-text" href="#">DETAIL</a>
+        </nav>
+    </div>
+    <div class="container">
+
+                {% block content %} {% endblock %}
+
+    </div>
 
 </body>
 
