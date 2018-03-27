@@ -31,6 +31,13 @@ body {
     margin-bottom: 5%;
 }
 
+a:hover, 
+a:focus {
+	color: #2f2f33 !important; 
+    text-decoration: none !important;
+    font-weight: bold !important;
+}
+
 .team-name {
     font-weight: 900;
     color: #2f2f33;
@@ -168,8 +175,8 @@ body {
 .box.is-uploading .box__uploading,
 .box.is-success .box__success,
 .box.is-error .box__error {
-    display: block;
-    position: absolute;
+    display: inline;
+    position: inherit;
     top: 50%;
     right: 0;
     left: 0;
@@ -281,21 +288,5 @@ body {
 
 
 
-            .nav_box {
-                float: left;
-                width: 150px;
-                height: 100%;
-                position: absolute;
-                display:table;
-                background-color: #2f2f33;
-                
-            }
 
-            .con_box {
-	           float: left;
-                max-width: 1200px;
-                width: 100%;
-                margin-left:150px;
-                height: 100%;
-            }
             
