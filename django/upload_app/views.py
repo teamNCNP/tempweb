@@ -6,6 +6,7 @@ from django.conf import settings
 from .models import UploadFile, UploadFileMeta
 from .forms import UploadForm, ReportForm
 from .es_view import *
+from .ida_make_ops import make_ops
 import hashlib, sys,os, ssdeep, json
 
 
@@ -21,9 +22,9 @@ def upload(request):
         UploadFile_obj = UploadFile(id=up_file_md5,upload_file=up_file)
         UploadFile_obj.save()
         up_file_url = os.path.join(settings.MEDIA_ROOT,UploadFile_obj.upload_file.name)
-        #sys.stderr.write(up_file_url)
+        #ops_file_url = make_ops(up_file_url)
         up_file_ssdeep = ssdeep.hash_from_file(up_file_url)
-        #'sys.stderr.write(up_file_ssdeep)
+        sys.stderr.write(up_file_ssdeep)
         UploadFileMeta_obj = UploadFileMeta(id=up_file_md5,ssdeep=up_file_ssdeep)
         UploadFileMeta_obj.save()
         
