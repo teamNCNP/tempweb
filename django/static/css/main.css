@@ -162,8 +162,7 @@ a:focus {
 .box.is-uploading .box__input,
 .box.is-success .box__input,
 .box.is-error .box__input {
-    visibility: hidden;
-    
+    display: none;
 }
 
 .box__uploading,

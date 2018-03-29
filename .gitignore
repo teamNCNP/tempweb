@@ -3,4 +3,5 @@
 django/web_sqlite3
 django/media/*
 django/upload_app/__pycache__/*
+django/upload_app/migrations/*
 django/capstoneweb/__pycache__/*
